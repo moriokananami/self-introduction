@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>自己紹介</title>
+  <link rel="stylesheet" href="test.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="saike3">
+  <div class="page3">
+    <p>こnにち<span class="nanami">ヮヮ</span>。ボク<span class="nanami2">と</span>おはなし<span class="nanami">㋛</span>よ？¿</p>
+
+  </div>
+
+  <div class="page3-1">
+    <form id="js-form">
+      <input type="text" id="todoInput" class="new-input" placeholder="質問タクサン書いておくって？">
+      <select id="importance" class="new-select">
+        <option value="low">低</option>
+        <option value="medium">中</option>
+        <option value="high">高</option>
+      </select>
+
+      <button type="button" id="addbtn">追加</button>
+      <button type="submit" id="submitbtn">送信</button>
+      <ul id="addlist" class="ulli"></ul>
+
+      <div style="text-align: center; margin-bottom: 20px;">
+        <input type="text" id="searchInput" class="new-input" placeholder="キーワードで探してみる？">
+      </div>
+    </form>
+    <p id="message" style="display: none; color: #690e0e; margin-top: 10px;" class="kowai">キミノ🈤トドイタよ</p>
+
+  </div>
+
+
+  <div class="btn">
+    <a href="test.html" id="homeBtn" title="いなくなっちゃうの？" class="tooltip">ホーム</a>
+  </div>
+
+  <script type="text/javascript" src="test.js"></script>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p>ほんとにホームに行く？</p>
+      <button id="yesBtn">はい</button>
+      <button id="noBtn">いいえ</button>
+    </div>
+  </div>
+
+
+  <script>
+    const spookyMessages = [
+      "記録開始：2025年10月13日 夢洲",
+      "観測者を確認…識別コード一致",
+      "ようこそ、再び。",
+      "あなたもいたよね？",
+      "この記録は消去されません。"
+    ];
+
+    spookyMessages.forEach((msg, index) => {
+      setTimeout(() => {
+        console.log(`%c${msg}`, "color: crimson; font-size: 14px; font-family: 'Creepster', cursive;");
+      }, index * 2000);
+    });
+  </script>
+
+
+
+</body>
+
+</html>
