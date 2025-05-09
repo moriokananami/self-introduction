@@ -5,7 +5,10 @@ function addListItem(text) {
     const importanceValue = importanceInput.value;
     const li = document.createElement("li");
     const span = document.createElement("span");
-    span.textContent = text;
+    // ★ ここで10文字制限を適用
+    const displayText = text.length > 10 ? text.slice(0, 10) + "..." : text;
+    span.textContent = displayText;
+    // 重要度に応じた色分け
     if (importanceValue === "high") {
         span.style.color = "red";
     }
@@ -16,13 +19,14 @@ function addListItem(text) {
         span.style.color = "black";
     }
     li.appendChild(span);
+    // 削除ボタン
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "❌";
     deleteBtn.style.marginLeft = "10px";
     deleteBtn.style.fontSize = "12px";
     deleteBtn.style.padding = "2px 5px";
     deleteBtn.style.cursor = "pointer";
-    const addList = document.getElementById("add-list");
+    const addList = document.getElementById("addlist");
     deleteBtn.addEventListener("click", function (event) {
         event.preventDefault();
         span.classList.add("glitch");
@@ -82,7 +86,7 @@ function showError(reason) {
     error.style.fontSize = "24px";
     error.style.border = "2px solid darkred";
     if (error) {
-        error.style.zIndex = "9999"; // zIndex は string です！
+        error.style.zIndex = "9999";
     }
     error.style.textShadow = "0 0 10px red";
     document.body.appendChild(error);
