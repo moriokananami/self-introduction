@@ -1,6 +1,11 @@
 const form = document.getElementById("js-form");
 
+function truncateText(text) {
+    return text.length > 10 ? text.slice(0, 10) + "..." : text;
+}
+
 function addListItem(text) {
+    text = truncateText(text);
     const importanceValue = document.getElementById("importance").value;
 
     const li = document.createElement("li");
