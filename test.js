@@ -96,9 +96,7 @@ function showError(reason) {
     error.style.border = "2px solid darkred";
     error.style.zIndex = 9999;
     error.style.textShadow = "0 0 10px red";
-
     document.body.appendChild(error);
-
     setTimeout(() => {
         error.remove();
     }, 1000);
@@ -192,7 +190,6 @@ document.getElementById("searchInput").addEventListener("keydown", function (eve
         });
     }
 });
-
 function showSearchError() {
     const error = document.createElement("div");
     error.textContent = "検索ワードを入れてね。";
@@ -207,9 +204,7 @@ function showSearchError() {
     error.style.border = "2px solid orange";
     error.style.zIndex = 9999;
     error.style.textShadow = "0 0 10px yellow";
-
     document.body.appendChild(error);
-
     setTimeout(() => {
         error.remove();
     }, 1000);
